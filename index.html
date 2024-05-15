@@ -1,11 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Animais Fantásticos</title>
   <link rel="stylesheet" href="styles/style.css">
   <link rel="stylesheet" href="styles/reset.css">
+
+  <!-- No caso de navegadores que estejam com o JS desabilitado, não ocorra a perda de conteúdo das sections (ver css .js .js-tabcontent section) -->
+  <script>
+    //html: document.documentElement
+    document.documentElement.className += ' js';
+  </script>
+  
 </head>
 <body>
   <header class="menu">
