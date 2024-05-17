@@ -253,9 +253,13 @@ body {
   display: none;
 }
 
+.js-accordion dt {
+  cursor: pointer;
+}
+
 .js-accordion dt::after {
   content: '\2BAF';
-  margin-left: 10px
+  margin-left: 10px;
 }
 
 .js-accordion dt.ativo::after {
