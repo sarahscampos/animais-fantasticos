@@ -15,7 +15,7 @@
   
 </head>
 <body>
-  <header class="menu js-menu">
+  <header class="menu" data-menu="suave">
     <nav>
       <ul>
         <li><a href="#animais">Animais</a></li>
@@ -26,9 +26,9 @@
     </nav>
   </header>
 
-  <section class="grid-section animais js-scroll" id="animais">
+  <section class="grid-section animais" data-anime="scroll" id="animais">
     <h1 class="titulo"> Animais Fantásticos</h1>
-    <ul class="animais-lista js-tabmenu">
+    <ul class="animais-lista" data-tab="menu">
       <li>
         <img src="img/imagem1.jpg" alt="Imagem de Tartaruga">
       </li>
@@ -53,8 +53,8 @@
         <img src="img/imagem6.jpg" alt="Imagem de Lobo">
       </li>
     </ul>
-    <div class="animais-descricao js-tabcontent">
-      <section>
+    <div class="animais-descricao" data-tab="content">
+      <section data-anime="show-right">
         <h2>Tartaruga Marinha</h2>
         <p>
           As tartarugas marinhas são criaturas fascinantes que habitam os oceanos há milhões de anos. Elas são conhecidas por sua resistência e longevidade, com algumas espécies vivendo até 100 anos. Esses majestosos répteis têm uma aparência distinta, com seus cascos ósseos e nadadeiras adaptadas para a vida na água.
@@ -67,7 +67,7 @@
         </p>
       </section>
 
-      <section>
+      <section data-anime="show-down">
         <h2>Elefante</h2>
         <p>
           Os elefantes são os maiores animais terrestres do planeta, conhecidos por sua inteligência excepcional, memória impressionante e laços sociais profundos. Esses majestosos mamíferos pertencem à família Elephantidae e são divididos em duas espécies principais: o elefante africano e o elefante asiático.
@@ -80,7 +80,7 @@
         </p>
       </section>
 
-      <section>
+      <section data-anime="show-right">
         <h2>Arara-Azul</h2>
         <p>
           A arara-azul é uma das aves mais impressionantes e icônicas da fauna brasileira. Com sua plumagem azul vibrante e o tamanho imponente, é impossível não se impressionar com a beleza dessas aves. 
@@ -93,7 +93,7 @@
         </p>
       </section>
 
-      <section>
+      <section data-anime="show-down">
         <h2>Baleia</h2>
         <p>
           As baleias são criaturas verdadeiramente majestosas dos oceanos, conhecidas por sua imponência e comportamento fascinante. Como os maiores mamíferos do planeta, as baleias impressionam não apenas pelo seu tamanho, mas também pela sua incrível inteligência e complexidade social. 
@@ -106,7 +106,7 @@
         </p>
       </section>
 
-      <section>
+      <section data-anime="show-right">
         <h2>Urso Polar</h2>
         <p>
           O urso polar é uma das espécies mais emblemáticas e adaptadas ao frio do planeta. Esses magníficos ursos são conhecidos por sua pelagem branca e espessa, que os ajuda a se camuflar na paisagem gelada do Ártico. Eles são os maiores carnívoros terrestres e são perfeitamente adaptados à vida no gelo e na neve. 
@@ -119,7 +119,7 @@
         </p>
       </section>
 
-      <section>
+      <section data-anime="show-down">
         <h2>Lobo</h2>
         <p>
           O lobo é um símbolo de força, resistência e inteligência. Esses magníficos animais são conhecidos por sua natureza social e pela forma como trabalham em equipe para caçar e cuidar de sua família, conhecida como matilha. Os lobos são encontrados em uma variedade de habitats, desde florestas densas até planícies abertas, e são uma parte essencial dos ecossistemas em que vivem.
@@ -134,9 +134,9 @@
     </div>
   </section>
 
-  <section class="grid-section faq js-scroll" id="faq">
+  <section class="grid-section faq" data-anime="scroll" id="faq">
     <h1 class="titulo">FAQ</h1>
-    <dl class="faq-lista js-accordion">
+    <dl class="faq-lista" data-anime="accordion">
       <dt>Qual a idade dos animais?</dt>
       <dd>
         A vida útil de diferentes animais varia consideravelmente. Tartarugas marinhas podem viver até 50-80 anos, elefantes africanos podem chegar a 60-70 anos, enquanto os asiáticos podem chegar a 60 anos ou mais. Araras-azuis podem viver cerca de 30-50 anos, baleias podem viver mais de 200 anos (como a baleia-da-groenlândia) ou até 50 anos (como a jubarte). Ursos polares têm uma expectativa de vida de cerca de 25-30 anos, e lobos vivem em média 6-8 anos na natureza, embora em cativeiro possam viver até 12-15 anos.
@@ -159,7 +159,7 @@
     </dl>
   </section>
 
-  <section class="grid-section contato js-scroll" id="contato">
+  <section class="grid-section contato" data-anime="scroll" id="contato">
     <h1 class="titulo">Contato</h1>
     <div class="mapa">
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1880582.5411702313!2d-44.899473542360454!3d-22.98655768417963!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997f5f5afde1dd%3A0xda098a1a9a0bce2e!2sIbama-RJ%20%7C%20Instituto%20Brasileiro%20do%20Meio%20Ambiente%20e%20dos%20Recursos%20Naturais%20Renov%C3%A1veis!5e0!3m2!1spt-BR!2sbr!4v1714929921989!5m2!1spt-BR!2sbr" width="300" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -177,5 +177,6 @@
   </footer>
 
   <script src="script.js"></script>
+  <script src="animacoes.js"></script>
 </body>
 </html>
