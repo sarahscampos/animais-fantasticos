@@ -1,0 +1,94 @@
+.modal-container {
+  height: 100vh;
+  width: 100%;
+  background: rgba(0, 0, 0, .5);
+  backdrop-filter: blur(2px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-container.ativo {
+  display: flex;
+}
+
+.modal {
+  background: white;  
+  min-width: 300px;
+  padding: 40px;
+  border: 5px solid #5599ff;
+  border-radius: 20px;
+  box-shadow: 0 0 0 5px white;
+  position: relative;
+}
+
+@keyframes modal {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -30px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.ativo .modal {
+  animation: modal .3s forwards;  
+}
+
+.fechar {
+  height: 35px;
+  width: 35px;
+  position: absolute;
+  top: -20px;
+  right: -15px;
+  border: 3px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 4px 4px 0px rgb(0,0,0,.3);
+  background-color: #ff5555;
+  color: white;
+  font-size: 1.2rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.modal label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  display: block;
+  margin: 1rem 0 .5rem 0;
+}
+
+.modal input {
+  font-family: 'Mukta', sans-serif;
+  font-size: 1rem;
+  width: 100%;
+  padding: .6rem .4rem; 
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 2px solid rgb(145, 145, 145);
+}
+
+.modal button[type="submit"] {
+  display: block;  
+  background-color: #5599ff;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  border: none;
+  border-radius: 5px;
+  padding: .7rem 2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 2rem auto 0;
+}
+.modal button[type="submit"]:hover {
+  background-color: #3e70bb;
+}
