@@ -1,174 +1,192 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Animais Fantásticos</title>
   <link rel="stylesheet" href="styles/style.css">
   <link rel="stylesheet" href="styles/reset.css">
+
+  <!-- No caso de navegadores que estejam com o JS desabilitado, não ocorra a perda de conteúdo das sections (ver css .js .js-tabcontent section) -->
+  <script>
+    //html: document.documentElement
+    document.documentElement.className += ' js';
+  </script>
+  
 </head>
 <body>
-  <header class="menu">
-    <nav>
-      <ul>
-        <li><a href="#animais">Animais</a></li>
-        <li><a href="#faq">FAQ</a></li>
-        <li><a href="#contato">Contato</a></li>
-        <li><a href="https://github.com/sarahscampos" target="_blank">Dev &#x1F469;&#x200D;&#x1F4BB;</a></li>
+  <div class="grid-container">
+    <header class="menu" data-menu="suave">
+      <nav>
+        <ul>
+          <li><a href="#animais">Animais</a></li>
+          <li data-dropdown>
+            <a href="sobre.html">Sobre</a>
+            <ul class="dropdown-menu">
+              <li><a href="empresa.html">Empresa</a></li>
+              <li><a href="equipe.html">Equipe</a></li>
+              <li><a href="socios.html">Sócios</a></li>
+              <li><a href="investidores.html">Investidores</a></li>
+            </ul>
+          </li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contato">Contato</a></li>
+          <li><a href="https://github.com/sarahscampos" target="_blank">Dev &#x1F469;&#x200D;&#x1F4BB;</a></li>
+          <li><a data-modal="abrir" href="login.html">Login</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section class="grid-section animais" data-anime="scroll" id="animais">
+      <h1 class="titulo"> Animais Fantásticos</h1>
+      <ul class="animais-lista" data-tab="menu">
+        <li>
+          <img src="img/imagem1.jpg" alt="Imagem de Tartaruga">
+        </li>
+        <li>
+          <img src="img/imagem2.jpg" alt="Imagem de Elefante">
+        </li>
+        <li>
+          <img src="img/imagem3.jpg" alt="Imagem de Araras-azuis">
+        </li>
+        <li>
+          <img src="img/imagem4.jpg" alt="Imagem de Baleia">
+        </li>
+        <li>
+          <img src="img/imagem5.jpg" alt="Imagem de Urso Polar">
+        </li>
+        <li>
+          <img src="img/imagem6.jpg" alt="Imagem de Lobo">
+        </li>
       </ul>
-    </nav>
-  </header>
+      <div class="animais-descricao" data-tab="content">
+        <section data-anime="show-right">
+          <h2>Tartaruga Marinha</h2>
+          <p>
+            As tartarugas marinhas são criaturas fascinantes que habitam os oceanos há milhões de anos. Elas são conhecidas por sua resistência e longevidade, com algumas espécies vivendo até 100 anos. Esses majestosos répteis têm uma aparência distinta, com seus cascos ósseos e nadadeiras adaptadas para a vida na água.
+          </p>
+          <p>
+            Elas são essenciais para o ecossistema marinho, ajudando a manter o equilíbrio das populações de várias espécies. Desempenhando um papel crucial na manutenção da saúde dos recifes de coral, pois se alimentam de esponjas marinhas que, se não controladas, podem sufocar os corais.
+          </p>
+          <p>
+            No entanto, as tartarugas marinhas enfrentam sérios desafios devido à atividade humana. A poluição dos oceanos, a pesca predatória e o aumento da temperatura da água representam ameaças significativas para esses animais. Para proteger as tartarugas marinhas, é essencial tomar medidas para reduzir a poluição marinha, promover práticas de pesca sustentáveis e conservar os habitats costeiros.
+          </p>
+        </section>
+        <section data-anime="show-down">
+          <h2>Elefante</h2>
+          <p>
+            Os elefantes são os maiores animais terrestres do planeta, conhecidos por sua inteligência excepcional, memória impressionante e laços sociais profundos. Esses majestosos mamíferos pertencem à família Elephantidae e são divididos em duas espécies principais: o elefante africano e o elefante asiático.
+          </p>
+          <p>
+            A vida dos elefantes é centrada em torno de fortes laços familiares, com grupos liderados por fêmeas mais velhas. Os elefantes são animais altamente sociais e comunicativos, usando uma variedade de vocalizações, gestos e até mesmo vibrações do solo para se comunicar uns com os outros.
+          </p>
+          <p>
+            Infelizmente, os elefantes enfrentam ameaças significativas devido à caça furtiva e à perda de habitat. É crucial tomar medidas para proteger os elefantes e garantir sua sobrevivência. Isso inclui o combate à caça furtiva, o estabelecimento de áreas protegidas e a promoção de coexistência pacífica entre humanos e elefantes. Com esforços concertados de conservação, podemos garantir que esses magníficos animais continuem a vagar livremente em seus habitats naturais.
+          </p>
+        </section>
+        <section data-anime="show-right">
+          <h2>Arara-Azul</h2>
+          <p>
+            A arara-azul é uma das aves mais impressionantes e icônicas da fauna brasileira. Com sua plumagem azul vibrante e o tamanho imponente, é impossível não se impressionar com a beleza dessas aves.
+          </p>
+          <p>
+            As araras-azuis são conhecidas por sua inteligência e por suas habilidades vocais, sendo capazes de imitar sons e até mesmo palavras humanas. Elas vivem em grupos familiares e são monogâmicas, permanecendo com o mesmo parceiro por toda a vida.
+          </p>
+          <p>
+            Essas aves desempenham um papel crucial na dispersão de sementes e na manutenção da biodiversidade das florestas tropicais. No entanto, enfrentam sérias ameaças devido à destruição do habitat, à captura para o comércio ilegal de animais e à caça predatória. Observar uma arara-azul voando livremente pelo céu é uma experiência indescritível e um lembrete poderoso da importância de protegermos a vida selvagem e os habitats naturais do nosso planeta.
+          </p>
+        </section>
+        <section data-anime="show-down">
+          <h2>Baleia</h2>
+          <p>
+            As baleias são criaturas verdadeiramente majestosas dos oceanos, conhecidas por sua imponência e comportamento fascinante. Como os maiores mamíferos do planeta, as baleias impressionam não apenas pelo seu tamanho, mas também pela sua incrível inteligência e complexidade social.
+          </p>
+          <p>
+            As baleias são animais migratórios, viajando milhares de quilômetros entre suas áreas de alimentação e reprodução. Durante essas migrações, elas desempenham um papel crucial na transferência de nutrientes entre diferentes partes dos oceanos, ajudando a manter a saúde dos ecossistemas marinhos.
+          </p>
+          <p>
+            Observar uma baleia emergindo das profundezas do oceano é uma experiência inesquecível e um lembrete da beleza e da diversidade da vida marinha. Proteger esses magníficos animais é fundamental para garantir um equilíbrio saudável em nossos oceanos e preservar a biodiversidade do nosso planeta.
+          </p>
+        </section>
+        <section data-anime="show-right">
+          <h2>Urso Polar</h2>
+          <p>
+            O urso polar é uma das espécies mais emblemáticas e adaptadas ao frio do planeta. Esses magníficos ursos são conhecidos por sua pelagem branca e espessa, que os ajuda a se camuflar na paisagem gelada do Ártico. Eles são os maiores carnívoros terrestres e são perfeitamente adaptados à vida no gelo e na neve.
+          </p>
+          <p>
+            Os ursos polares têm uma dieta principalmente carnívora, alimentando-se principalmente de focas. Eles são excelentes nadadores e podem percorrer grandes distâncias no gelo em busca de comida. Sua pele preta e espessa ajuda a absorver o calor do sol, mantendo-os aquecidos mesmo em temperaturas extremamente baixas.
+          </p>
+          <p>
+            Para proteger os ursos polares, é crucial tomar medidas para combater as mudanças climáticas e reduzir as emissões de gases de efeito estufa. A conservação de seu habitat natural também é fundamental, assim como a implementação de práticas de caça sustentáveis.
+          </p>
+        </section>
+        <section data-anime="show-down">
+          <h2>Lobo</h2>
+          <p>
+            O lobo é um símbolo de força, resistência e inteligência. Esses magníficos animais são conhecidos por sua natureza social e pela forma como trabalham em equipe para caçar e cuidar de sua família, conhecida como matilha. Os lobos são encontrados em uma variedade de habitats, desde florestas densas até planícies abertas, e são uma parte essencial dos ecossistemas em que vivem.
+          </p>
+          <p>
+            Os lobos têm uma comunicação complexa, usando vocalizações, posturas corporais e expressões faciais para se comunicarem uns com os outros. Eles são caçadores ágeis e adaptáveis, capazes de perseguir presas em velocidades de até 65 km/h.
+          </p>
+          <p>
+            Esses predadores ágeis desempenham um papel crucial na regulação das populações de presas e na manutenção da saúde dos ecossistemas. Sua presença em um ecossistema saudável é um sinal de biodiversidade e equilíbrio.
+          </p>
+        </section>
+      </div>
+    </section>
+    <section class="grid-section faq" data-anime="scroll" id="faq">
+      <h1 class="titulo">FAQ</h1>
+      <dl class="faq-lista" data-anime="accordion">
+        <dt>Qual a idade dos animais?</dt>
+        <dd>
+          A vida útil de diferentes animais varia consideravelmente. Tartarugas marinhas podem viver até 50-80 anos, elefantes africanos podem chegar a 60-70 anos, enquanto os asiáticos podem chegar a 60 anos ou mais. Araras-azuis podem viver cerca de 30-50 anos, baleias podem viver mais de 200 anos (como a baleia-da-groenlândia) ou até 50 anos (como a jubarte). Ursos polares têm uma expectativa de vida de cerca de 25-30 anos, e lobos vivem em média 6-8 anos na natureza, embora em cativeiro possam viver até 12-15 anos.
+        </dd>
+        <dt>Eles são fantásticos?</dt>
+        <dd>
+          Esses animais são fantásticos por suas características únicas e impressionantes. As tartarugas marinhas são grandes navegadoras, os elefantes têm laços sociais complexos, as araras-azuis são belas e inteligentes, as baleias são os maiores animais do planeta, os ursos polares são adaptados ao ambiente ártico e os lobos são fundamentais para os ecossistemas. Cada um deles possui qualidades extraordinárias que os tornam maravilhas da natureza.
+        </dd>
+        <dt>Qual a diferença?</dt>
+        <dd>
+          Esses animais diferem em sua biologia básica e no ambiente em que vivem. Cada espécie tem suas próprias características distintas que a tornam única e essencial para seu ecossistema.
+        </dd>
+        <dt>Como proteger?</dt>
+        <dd>
+          Para proteger esses animais, é crucial preservar seus habitats naturais, reduzir a caça ilegal e o tráfico de animais, promover práticas de pesca sustentável, e conscientizar sobre a importância da conservação da biodiversidade e dos ecossistemas em que vivem.
+        </dd>
+      </dl>
+    </section>
+    <section class="grid-section contato" data-anime="scroll" id="contato">
+      <h1 class="titulo">Contato</h1>
+      <div class="mapa">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1880582.5411702313!2d-44.899473542360454!3d-22.98655768417963!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997f5f5afde1dd%3A0xda098a1a9a0bce2e!2sIbama-RJ%20%7C%20Instituto%20Brasileiro%20do%20Meio%20Ambiente%20e%20dos%20Recursos%20Naturais%20Renov%C3%A1veis!5e0!3m2!1spt-BR!2sbr!4v1714929921989!5m2!1spt-BR!2sbr" width="300" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <ul class="dados">
+        <li><a href="mailto:sarahstephanycampos@gmail.com">sarahstephanycampos@gmail.com</a></li>
+        <li>+55 (21) 99999-9999</li>
+        <li>Praça Quinze de Novembro, 42 - Centro</li>
+        <li>Rio de Janeiro - RJ</li>
+      </ul>
+    </section>
+    
+    <footer class="copy">
+      <p>Todos os direitos reservados.</p>
+    </footer>
+  </div>
 
-  <section class="grid-section animais" id="animais">
-    <h1 class="titulo"> Animais Fantásticos</h1>
-    <ul class="animais-lista">
-      <li>
-        <img src="img/imagem1.jpg" alt="Imagem de Tartaruga">
-      </li>
+  <section class="modal-container" data-modal="container"> 
+    <div class="modal">
+      <button class="fechar" data-modal="fechar">X</button>
+      <form action="">
+        <label for="email">E-mail</label>
+        <input type="text" for="email" id="email">
 
-      <li>
-        <img src="img/imagem2.jpg" alt="Imagem de Elefante">
-      </li>
+        <label for="senha">Senha</label>
+        <input type="password" for="senha" id="senha">
 
-      <li>
-        <img src="img/imagem3.jpg" alt="Imagem de Araras-azuis">
-      </li>
-
-      <li>
-        <img src="img/imagem4.jpg" alt="Imagem de Baleia">
-      </li>
-
-      <li>
-        <img src="img/imagem5.jpg" alt="Imagem de Urso Polar">
-      </li>
-
-      <li>
-        <img src="img/imagem6.jpg" alt="Imagem de Lobo">
-      </li>
-    </ul>
-    <div class="animais-descricao">
-      <section>
-        <h2>Tartaruga Marinha</h2>
-        <p>
-          As tartarugas marinhas são criaturas fascinantes que habitam os oceanos há milhões de anos. Elas são conhecidas por sua resistência e longevidade, com algumas espécies vivendo até 100 anos. Esses majestosos répteis têm uma aparência distinta, com seus cascos ósseos e nadadeiras adaptadas para a vida na água.
-        </p>
-        <p>
-          Elas são essenciais para o ecossistema marinho, ajudando a manter o equilíbrio das populações de várias espécies. Desempenhando um papel crucial na manutenção da saúde dos recifes de coral, pois se alimentam de esponjas marinhas que, se não controladas, podem sufocar os corais.
-        </p>
-        <p>
-          No entanto, as tartarugas marinhas enfrentam sérios desafios devido à atividade humana. A poluição dos oceanos, a pesca predatória e o aumento da temperatura da água representam ameaças significativas para esses animais. Para proteger as tartarugas marinhas, é essencial tomar medidas para reduzir a poluição marinha, promover práticas de pesca sustentáveis e conservar os habitats costeiros.
-        </p>
-      </section>
-
-      <section>
-        <h2>Elefante</h2>
-        <p>
-          Os elefantes são os maiores animais terrestres do planeta, conhecidos por sua inteligência excepcional, memória impressionante e laços sociais profundos. Esses majestosos mamíferos pertencem à família Elephantidae e são divididos em duas espécies principais: o elefante africano e o elefante asiático.
-        </p>
-        <p>
-          A vida dos elefantes é centrada em torno de fortes laços familiares, com grupos liderados por fêmeas mais velhas. Os elefantes são animais altamente sociais e comunicativos, usando uma variedade de vocalizações, gestos e até mesmo vibrações do solo para se comunicar uns com os outros.
-        </p>
-        <p>
-          Infelizmente, os elefantes enfrentam ameaças significativas devido à caça furtiva e à perda de habitat. É crucial tomar medidas para proteger os elefantes e garantir sua sobrevivência. Isso inclui o combate à caça furtiva, o estabelecimento de áreas protegidas e a promoção de coexistência pacífica entre humanos e elefantes. Com esforços concertados de conservação, podemos garantir que esses magníficos animais continuem a vagar livremente em seus habitats naturais.
-        </p>
-      </section>
-
-      <section>
-        <h2>Arara-Azul</h2>
-        <p>
-          A arara-azul é uma das aves mais impressionantes e icônicas da fauna brasileira. Com sua plumagem azul vibrante e o tamanho imponente, é impossível não se impressionar com a beleza dessas aves. 
-        </p>
-        <p>
-          As araras-azuis são conhecidas por sua inteligência e por suas habilidades vocais, sendo capazes de imitar sons e até mesmo palavras humanas. Elas vivem em grupos familiares e são monogâmicas, permanecendo com o mesmo parceiro por toda a vida.
-        </p>
-        <p>
-          Essas aves desempenham um papel crucial na dispersão de sementes e na manutenção da biodiversidade das florestas tropicais. No entanto, enfrentam sérias ameaças devido à destruição do habitat, à captura para o comércio ilegal de animais e à caça predatória. Observar uma arara-azul voando livremente pelo céu é uma experiência indescritível e um lembrete poderoso da importância de protegermos a vida selvagem e os habitats naturais do nosso planeta.
-        </p>
-      </section>
-
-      <section>
-        <h2>Baleia</h2>
-        <p>
-          As baleias são criaturas verdadeiramente majestosas dos oceanos, conhecidas por sua imponência e comportamento fascinante. Como os maiores mamíferos do planeta, as baleias impressionam não apenas pelo seu tamanho, mas também pela sua incrível inteligência e complexidade social. 
-        </p>
-        <p>
-          As baleias são animais migratórios, viajando milhares de quilômetros entre suas áreas de alimentação e reprodução. Durante essas migrações, elas desempenham um papel crucial na transferência de nutrientes entre diferentes partes dos oceanos, ajudando a manter a saúde dos ecossistemas marinhos.
-        </p>
-        <p>
-          Observar uma baleia emergindo das profundezas do oceano é uma experiência inesquecível e um lembrete da beleza e da diversidade da vida marinha. Proteger esses magníficos animais é fundamental para garantir um equilíbrio saudável em nossos oceanos e preservar a biodiversidade do nosso planeta.
-        </p>
-      </section>
-
-      <section>
-        <h2>Urso Polar</h2>
-        <p>
-          O urso polar é uma das espécies mais emblemáticas e adaptadas ao frio do planeta. Esses magníficos ursos são conhecidos por sua pelagem branca e espessa, que os ajuda a se camuflar na paisagem gelada do Ártico. Eles são os maiores carnívoros terrestres e são perfeitamente adaptados à vida no gelo e na neve. 
-        </p>
-        <p>
-          Os ursos polares têm uma dieta principalmente carnívora, alimentando-se principalmente de focas. Eles são excelentes nadadores e podem percorrer grandes distâncias no gelo em busca de comida. Sua pele preta e espessa ajuda a absorver o calor do sol, mantendo-os aquecidos mesmo em temperaturas extremamente baixas.
-        </p>
-        <p>
-          Para proteger os ursos polares, é crucial tomar medidas para combater as mudanças climáticas e reduzir as emissões de gases de efeito estufa. A conservação de seu habitat natural também é fundamental, assim como a implementação de práticas de caça sustentáveis.
-        </p>
-      </section>
-
-      <section>
-        <h2>Lobo</h2>
-        <p>
-          O lobo é um símbolo de força, resistência e inteligência. Esses magníficos animais são conhecidos por sua natureza social e pela forma como trabalham em equipe para caçar e cuidar de sua família, conhecida como matilha. Os lobos são encontrados em uma variedade de habitats, desde florestas densas até planícies abertas, e são uma parte essencial dos ecossistemas em que vivem.
-        </p>
-        <p>
-          Os lobos têm uma comunicação complexa, usando vocalizações, posturas corporais e expressões faciais para se comunicarem uns com os outros. Eles são caçadores ágeis e adaptáveis, capazes de perseguir presas em velocidades de até 65 km/h.
-        </p>
-        <p>
-          Esses predadores ágeis desempenham um papel crucial na regulação das populações de presas e na manutenção da saúde dos ecossistemas. Sua presença em um ecossistema saudável é um sinal de biodiversidade e equilíbrio.
-        </p>
-      </section>
+        <button type="submit">Entrar</button>
+      </form>
     </div>
   </section>
 
-  <section class="grid-section faq" id="faq">
-    <h1 class="titulo">FAQ</h1>
-    <dl class="faq-lista">
-      <dt>Qual a idade dos animais?</dt>
-      <dd>
-        A vida útil de diferentes animais varia consideravelmente. Tartarugas marinhas podem viver até 50-80 anos, elefantes africanos podem chegar a 60-70 anos, enquanto os asiáticos podem chegar a 60 anos ou mais. Araras-azuis podem viver cerca de 30-50 anos, baleias podem viver mais de 200 anos (como a baleia-da-groenlândia) ou até 50 anos (como a jubarte). Ursos polares têm uma expectativa de vida de cerca de 25-30 anos, e lobos vivem em média 6-8 anos na natureza, embora em cativeiro possam viver até 12-15 anos.
-      </dd>
-
-      <dt>Eles são fantásticos?</dt>
-      <dd>
-        Esses animais são fantásticos por suas características únicas e impressionantes. As tartarugas marinhas são grandes navegadoras, os elefantes têm laços sociais complexos, as araras-azuis são belas e inteligentes, as baleias são os maiores animais do planeta, os ursos polares são adaptados ao ambiente ártico e os lobos são fundamentais para os ecossistemas. Cada um deles possui qualidades extraordinárias que os tornam maravilhas da natureza.
-      </dd>
-
-      <dt>Qual a diferença?</dt>
-      <dd>
-        Esses animais diferem em sua biologia básica e no ambiente em que vivem. Cada espécie tem suas próprias características distintas que a tornam única e essencial para seu ecossistema.
-      </dd>
-
-      <dt>Como proteger?</dt>
-      <dd>
-        Para proteger esses animais, é crucial preservar seus habitats naturais, reduzir a caça ilegal e o tráfico de animais, promover práticas de pesca sustentável, e conscientizar sobre a importância da conservação da biodiversidade e dos ecossistemas em que vivem.
-      </dd>
-    </dl>
-  </section>
-
-  <section class="grid-section contato" id="contato">
-    <h1 class="titulo">Contato</h1>
-    <div class="mapa">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1880582.5411702313!2d-44.899473542360454!3d-22.98655768417963!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997f5f5afde1dd%3A0xda098a1a9a0bce2e!2sIbama-RJ%20%7C%20Instituto%20Brasileiro%20do%20Meio%20Ambiente%20e%20dos%20Recursos%20Naturais%20Renov%C3%A1veis!5e0!3m2!1spt-BR!2sbr!4v1714929921989!5m2!1spt-BR!2sbr" width="300" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
-    <ul class="dados">
-      <li><a href="mailto:sarahstephanycampos@gmail.com">sarahstephanycampos@gmail.com</a></li>
-      <li>+55 (21) 99999-9999</li>
-      <li>Praça Quinze de Novembro, 42 - Centro</li>
-      <li>Rio de Janeiro - RJ</li>
-    </ul>
-  </section>
-  
-  <footer class="copy">
-    <p>Todos os direitos reservados.</p>
-  </footer>
-
-  <script src="script.js"></script>
+  <script type="module" src="js/script.js"></script>
 </body>
 </html>
