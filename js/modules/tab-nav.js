@@ -30,6 +30,7 @@ export default class initTabNav {
       this.addTabNavEvent();
      
     }
+    return this;
 
   }
 
