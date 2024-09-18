@@ -1,9 +1,14 @@
-export default function initAnimaNumeros() {
+export default class AnimaNumeros {
 
-  function animaNumeros() {
-    const numeros = document.querySelectorAll('[data-numero]');
-    numeros.forEach((numero) => {
-      const total = +numero.innerText;
+  constructor(numeros, observerTarget, observerClass) {
+    this.numeros = document.querySelectorAll(numeros);
+    this.observerClass = observerClass;
+    this.observerTarget = document.querySelector(observerTarget);
+    this.handleMutation = this.handleMutation.bind(this);
+  }
+
+  static incrementarNumero(numero) { // método static não precisa do objeto (this) para funcionar
+    const total = +numero.innerText;
       const incremento = Math.floor(total / 100);
       let start = 0;
       const timer = setInterval(() => {
@@ -14,20 +19,36 @@ export default function initAnimaNumeros() {
           clearInterval(timer);
         }
       }, 25 * Math.random())
-      
+  }
+
+  animaNumeros() {
+    this.numeros.forEach((numero) => {
+      this.constructor.incrementarNumero(numero); //se o método for static
     })
   }  
 
-  function handleMutation(mutation) {
-    if(mutation[0].target.classList.contains('ativo')) {
-      observer.disconnect();
-      animaNumeros();
+  handleMutation(mutation) {
+    if(mutation[0].target.classList.contains(this.observerClass)) {
+      this.observer.disconnect();
+      this.animaNumeros();
     }
   }
 
-  const observerTarget = document.querySelector('.numeros');
-  const observer = new MutationObserver(handleMutation);
+  addMutationObserver() {
+    this.observer = new MutationObserver(this.handleMutation);
+  
+    this.observer.observe(this.observerTarget, {attributes: true});
 
-  observer.observe(observerTarget, {attributes: true});
+  }
+
+  init() {
+    if(this.numeros.length && this.observerTarget) {
+      this.addMutationObserver();
+    }
+    
+    return this;
+  }
+
+  
   
 }
