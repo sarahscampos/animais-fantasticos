@@ -18,12 +18,14 @@
 
 .modal {
   background: white;  
-  min-width: 300px;
+  width: 80vw;
+  max-width: 600px;
   padding: 40px;
   border: 5px solid #5599ff;
   border-radius: 20px;
   box-shadow: 0 0 0 5px white;
   position: relative;
+  box-sizing: border-box;
 }
 
 @keyframes modal {
